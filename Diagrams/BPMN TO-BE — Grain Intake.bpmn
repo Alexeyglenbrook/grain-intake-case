@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_ToBe" targetNamespace="http://portfolio.example/grain-intake" exporter="Camunda Modeler" exporterVersion="5.48.0">
+  <bpmn:collaboration id="Collaboration_ToBe">
+    <bpmn:participant id="Participant_ToBe" name="Елеватор — приймання зерна на зберігання (TO-BE, продукти osnova / smart)" processRef="Process_ToBe" />
+    <bpmn:textAnnotation id="Ann_ToBe_0">
+      <bpmn:text>FG-01 · osnova.бронь · Fit (усуває ВМ-1)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_0" associationDirection="None" sourceRef="T_Book" targetRef="Ann_ToBe_0" />
+    <bpmn:textAnnotation id="Ann_ToBe_1">
+      <bpmn:text>FG-02 · osnova.поклажедатель · Fit + RFID (ВМ-1, ВМ-2)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_1" associationDirection="None" sourceRef="T_Arrive" targetRef="Ann_ToBe_1" />
+    <bpmn:textAnnotation id="Ann_ToBe_2">
+      <bpmn:text>FG-03 · автоваги клієнта · Інтеграція → US-01 (ВМ-3)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_2" associationDirection="None" sourceRef="T_Gross" targetRef="Ann_ToBe_2" />
+    <bpmn:textAnnotation id="Ann_ToBe_3">
+      <bpmn:text>FG-04 · osnova.предприятие · Налаштування (ВМ-4)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_3" associationDirection="None" sourceRef="T_Lab" targetRef="Ann_ToBe_3" />
+    <bpmn:textAnnotation id="Ann_ToBe_4">
+      <bpmn:text>FG-05, FG-06 · osnova.предприятие (ВМ-5)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_4" associationDirection="None" sourceRef="T_Assign" targetRef="Ann_ToBe_4" />
+    <bpmn:textAnnotation id="Ann_ToBe_5">
+      <bpmn:text>FG-07 · smart.сдау · Fit, блокує змішування (ВМ-5)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_5" associationDirection="None" sourceRef="T_Route" targetRef="Ann_ToBe_5" />
+    <bpmn:textAnnotation id="Ann_ToBe_6">
+      <bpmn:text>FG-13 · е-ТТН · уточнити в ZEO</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_6" associationDirection="None" sourceRef="T_Leave" targetRef="Ann_ToBe_6" />
+    <bpmn:textAnnotation id="Ann_ToBe_7">
+      <bpmn:text>FG-08 Налаштування · FG-09 Gap → US-02 (ВМ-6)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_7" associationDirection="None" sourceRef="T_Credit" targetRef="Ann_ToBe_7" />
+    <bpmn:textAnnotation id="Ann_ToBe_8">
+      <bpmn:text>FG-12 · реєстр і залишки онлайн · Fit (ВМ-7)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_8" associationDirection="None" sourceRef="T_Check" targetRef="Ann_ToBe_8" />
+    <bpmn:textAnnotation id="Ann_ToBe_9">
+      <bpmn:text>FG-10 · BAS клієнта · Інтеграція → US-03</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_9" associationDirection="None" sourceRef="T_Export" targetRef="Ann_ToBe_9" />
+    <bpmn:textAnnotation id="Ann_ToBe_10">
+      <bpmn:text>FG-11 · вага, якість і залікова вага в Telegram · Fit (ВМ-8)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_10" associationDirection="None" sourceRef="T_End" targetRef="Ann_ToBe_10" />
+    <bpmn:textAnnotation id="Ann_ToBe_11">
+      <bpmn:text>FG-15 · smart.сдау + модуль сушарок · Fit, дод. модуль (ВМ-9)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_11" associationDirection="None" sourceRef="T_Dry" targetRef="Ann_ToBe_11" />
+    <bpmn:textAnnotation id="Ann_ToBe_12">
+      <bpmn:text>FG-16 · smart.термометрія стежить за нагрівом · Fit</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_12" associationDirection="None" sourceRef="T_Vent" targetRef="Ann_ToBe_12" />
+    <bpmn:textAnnotation id="Ann_ToBe_13">
+      <bpmn:text>FG-17 · планування знезараження в osnova · уточнити в ZEO</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_ToBe_13" associationDirection="None" sourceRef="T_Fumig" targetRef="Ann_ToBe_13" />
+    <bpmn:textAnnotation id="Ann_ToBe_Legend">
+      <bpmn:text>Типи задач: рука — вручну, без системи; людина — людина працює в системі; шестерня — виконує система автоматично.
+FG-NN — рядок Fit-Gap матриці (розділ 5 кейсу): чим саме продукт osnova / smart закриває потребу клієнта.
+Fit — є в продукті з коробки.   Налаштування — довідники, норми, ролі без програмування.   Інтеграція — обмін з обладнанням чи системами клієнта (ваги, BAS).   Gap — доробка під клієнта.
+US-NN — User Story для розробки (пишемо лише на Інтеграцію та Gap).   ВМ-N — вузьке місце з AS-IS, яке усуває цей крок.
+Складський документ оформлюється на партію, окремим процесом; реєстрація в держреєстрі складських документів — FG-14, уточнити в ZEO.
+Вологість — групи за Техрегламентом зернового складу (п. 6.9.4): середньої сухості 13,5–15,5%, вологе 15,5–17%, сире понад 17%. Базис 14% — приклад для кукурудзи. Межу між вентилюванням і сушінням узято як межу групи «сире»; конкретну межу встановлює технолог.
+Далі — зберігання, окремий процес: термопідвіски в силосі стежать за температурою; якщо зерно гріється — вентилюють або перекачують у інший силос.
+Схема — приймання на зберігання (поклажодавець). При закупівлі зерна елеватором кроки ті самі, але замість складського документа — документи купівлі-продажу, а оплата йде за заліковою вагою.</bpmn:text>
+    </bpmn:textAnnotation>
+  </bpmn:collaboration>
+  <bpmn:process id="Process_ToBe" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_ToBe">
+      <bpmn:lane id="Lane_ToBe_7" name="Силосний корпус">
+        <bpmn:flowNodeRef>T_Vent</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Fumig</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_6" name="Оператор SCADA">
+        <bpmn:flowNodeRef>T_Route</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Moist</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_M</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Store</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_M2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Infest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_M3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Stored</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_5" name="Доробка (сепаратор, сушарка)">
+        <bpmn:flowNodeRef>T_Clean</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Buffer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Dry</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Measure</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_DryOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Clean2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_4" name="Бухгалтерія">
+        <bpmn:flowNodeRef>T_Check</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_3" name="Вагова">
+        <bpmn:flowNodeRef>T_Gross</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Tare</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Fork2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_2" name="Лабораторія">
+        <bpmn:flowNodeRef>T_Sample</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Lab</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_1" name="Система osnova">
+        <bpmn:flowNodeRef>T_Quota</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_QOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Assign</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Export</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_End</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_ToBe_0" name="Водій / поклажодавець">
+        <bpmn:flowNodeRef>T_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Book</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Arrive</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_ToSampler</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Reject</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Unload</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Split</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_ToScale</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Leave</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Left</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="T_Start" name="Потрібно здати зерно">
+      <bpmn:outgoing>TF1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="T_Book" name="Забронювати тайм-слот у Telegram-боті">
+      <bpmn:incoming>TF1</bpmn:incoming>
+      <bpmn:outgoing>TF2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="T_Quota" name="Перевірити квоту, підтвердити бронь, нагадати водію">
+      <bpmn:incoming>TF2</bpmn:incoming>
+      <bpmn:outgoing>TF3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="T_Arrive" name="Заїхати у свій слот, отримати RFID-мітку, стати на ваги">
+      <bpmn:incoming>TF3</bpmn:incoming>
+      <bpmn:outgoing>TF4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="T_Gross" name="Зважити брутто — вага й номер надходять автоматично">
+      <bpmn:incoming>TF4</bpmn:incoming>
+      <bpmn:outgoing>TF5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:manualTask id="T_ToSampler" name="Під&#39;їхати до пробовідбірника">
+      <bpmn:incoming>TF5</bpmn:incoming>
+      <bpmn:outgoing>TF6</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="T_Sample" name="Відібрати пробу з кузова">
+      <bpmn:incoming>TF6</bpmn:incoming>
+      <bpmn:outgoing>TF7</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="T_Lab" name="Аналіз (вологість, домішки, натура, зараженість) — у систему">
+      <bpmn:incoming>TF7</bpmn:incoming>
+      <bpmn:outgoing>TF8</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="T_QOk" name="Якість у межах договору?">
+      <bpmn:incoming>TF8</bpmn:incoming>
+      <bpmn:outgoing>TF10</bpmn:outgoing>
+      <bpmn:outgoing>TF11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="T_Reject" name="Відмова з причиною в Telegram">
+      <bpmn:incoming>TF10</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="T_Assign" name="Призначити яму, доробку і силос за якістю та планом; заражене — окремо">
+      <bpmn:incoming>TF11</bpmn:incoming>
+      <bpmn:outgoing>TF12</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="T_Route" name="Запустити маршрут у smart.сдау">
+      <bpmn:incoming>TF12</bpmn:incoming>
+      <bpmn:outgoing>TF13</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:manualTask id="T_Unload" name="Розвантажитися в призначену яму">
+      <bpmn:incoming>TF13</bpmn:incoming>
+      <bpmn:outgoing>TF13b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:parallelGateway id="T_Split" name="">
+      <bpmn:incoming>TF13b</bpmn:incoming>
+      <bpmn:outgoing>TF14</bpmn:outgoing>
+      <bpmn:outgoing>TG1</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:manualTask id="T_ToScale" name="Заїхати на ваги — RFID фіксує маршрут">
+      <bpmn:incoming>TF14</bpmn:incoming>
+      <bpmn:outgoing>TF14b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:serviceTask id="T_Tare" name="Зважити тару — нетто рахується автоматично">
+      <bpmn:incoming>TF14b</bpmn:incoming>
+      <bpmn:outgoing>TF15</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:parallelGateway id="T_Fork2" name="">
+      <bpmn:incoming>TF15</bpmn:incoming>
+      <bpmn:outgoing>TF16</bpmn:outgoing>
+      <bpmn:outgoing>TF18</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="T_Leave" name="Отримати ТТН або е-ТТН з відміткою, виїхати">
+      <bpmn:incoming>TF16</bpmn:incoming>
+      <bpmn:outgoing>TF17</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="T_Left" name="Авто виїхало">
+      <bpmn:incoming>TF17</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="T_Credit" name="Розрахувати залікову вагу, додати в реєстр поклажодавця">
+      <bpmn:incoming>TF18</bpmn:incoming>
+      <bpmn:outgoing>TF19</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="T_Check" name="Перевірити розрахунок">
+      <bpmn:incoming>TF19</bpmn:incoming>
+      <bpmn:outgoing>TF20</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="T_Export" name="Передати дані в BAS, сповістити поклажодавця">
+      <bpmn:incoming>TF20</bpmn:incoming>
+      <bpmn:outgoing>TF21</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="T_End" name="Машину враховано, поклажодавець має результат">
+      <bpmn:incoming>TF21</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="T_Clean" name="Попереднє очищення, вага відходів — у систему">
+      <bpmn:incoming>TG1</bpmn:incoming>
+      <bpmn:outgoing>TG2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="T_Moist" name="Вологість за аналізом (базис 14%)?">
+      <bpmn:incoming>TG2</bpmn:incoming>
+      <bpmn:outgoing>TG3</bpmn:outgoing>
+      <bpmn:outgoing>TG4</bpmn:outgoing>
+      <bpmn:outgoing>TG5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="T_Buffer" name="Накопичити в буферному силосі сирого зерна">
+      <bpmn:incoming>TG3</bpmn:incoming>
+      <bpmn:outgoing>TG6</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="T_Dry" name="Просушити — режим за вологістю партії">
+      <bpmn:incoming>TG6</bpmn:incoming>
+      <bpmn:incoming>TG8</bpmn:incoming>
+      <bpmn:outgoing>TG6b</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="T_Measure" name="Виміряти вологість на виході сушарки — дані в систему">
+      <bpmn:incoming>TG6b</bpmn:incoming>
+      <bpmn:outgoing>TG7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="T_DryOk" name="Вологість на виході ≤ 14%?">
+      <bpmn:incoming>TG7</bpmn:incoming>
+      <bpmn:outgoing>TG8</bpmn:outgoing>
+      <bpmn:outgoing>TG9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="T_Vent" name="Подати в силос з аерацією, увімкнути вентилювання">
+      <bpmn:incoming>TG5</bpmn:incoming>
+      <bpmn:outgoing>TG10</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="T_Clean2" name="Вторинне очищення після сушіння">
+      <bpmn:incoming>TG9</bpmn:incoming>
+      <bpmn:outgoing>TG9b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="T_M" name="">
+      <bpmn:incoming>TG4</bpmn:incoming>
+      <bpmn:incoming>TG9b</bpmn:incoming>
+      <bpmn:outgoing>TG11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="T_Store" name="Подати зерно в призначений силос">
+      <bpmn:incoming>TG11</bpmn:incoming>
+      <bpmn:outgoing>TG11b</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="T_M2" name="">
+      <bpmn:incoming>TG10</bpmn:incoming>
+      <bpmn:incoming>TG11b</bpmn:incoming>
+      <bpmn:outgoing>TG12</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="T_Infest" name="Заражено шкідниками?">
+      <bpmn:incoming>TG12</bpmn:incoming>
+      <bpmn:outgoing>TG13</bpmn:outgoing>
+      <bpmn:outgoing>TG14</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="T_Fumig" name="Запланувати знезараження, силос поза обігом на час дегазації">
+      <bpmn:incoming>TG13</bpmn:incoming>
+      <bpmn:outgoing>TG15</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="T_M3" name="">
+      <bpmn:incoming>TG14</bpmn:incoming>
+      <bpmn:incoming>TG15</bpmn:incoming>
+      <bpmn:outgoing>TG16</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="T_Stored" name="Зерно в силосі">
+      <bpmn:incoming>TG16</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="TF1" sourceRef="T_Start" targetRef="T_Book" />
+    <bpmn:sequenceFlow id="TF2" sourceRef="T_Book" targetRef="T_Quota" />
+    <bpmn:sequenceFlow id="TF3" sourceRef="T_Quota" targetRef="T_Arrive" />
+    <bpmn:sequenceFlow id="TF4" sourceRef="T_Arrive" targetRef="T_Gross" />
+    <bpmn:sequenceFlow id="TF5" sourceRef="T_Gross" targetRef="T_ToSampler" />
+    <bpmn:sequenceFlow id="TF6" sourceRef="T_ToSampler" targetRef="T_Sample" />
+    <bpmn:sequenceFlow id="TF7" sourceRef="T_Sample" targetRef="T_Lab" />
+    <bpmn:sequenceFlow id="TF8" sourceRef="T_Lab" targetRef="T_QOk" />
+    <bpmn:sequenceFlow id="TF10" name="ні" sourceRef="T_QOk" targetRef="T_Reject" />
+    <bpmn:sequenceFlow id="TF11" name="так" sourceRef="T_QOk" targetRef="T_Assign" />
+    <bpmn:sequenceFlow id="TF12" sourceRef="T_Assign" targetRef="T_Route" />
+    <bpmn:sequenceFlow id="TF13" sourceRef="T_Route" targetRef="T_Unload" />
+    <bpmn:sequenceFlow id="TF13b" sourceRef="T_Unload" targetRef="T_Split" />
+    <bpmn:sequenceFlow id="TF14" sourceRef="T_Split" targetRef="T_ToScale" />
+    <bpmn:sequenceFlow id="TG1" sourceRef="T_Split" targetRef="T_Clean" />
+    <bpmn:sequenceFlow id="TF14b" sourceRef="T_ToScale" targetRef="T_Tare" />
+    <bpmn:sequenceFlow id="TF15" sourceRef="T_Tare" targetRef="T_Fork2" />
+    <bpmn:sequenceFlow id="TF16" sourceRef="T_Fork2" targetRef="T_Leave" />
+    <bpmn:sequenceFlow id="TF18" sourceRef="T_Fork2" targetRef="T_Credit" />
+    <bpmn:sequenceFlow id="TF17" sourceRef="T_Leave" targetRef="T_Left" />
+    <bpmn:sequenceFlow id="TF19" sourceRef="T_Credit" targetRef="T_Check" />
+    <bpmn:sequenceFlow id="TF20" sourceRef="T_Check" targetRef="T_Export" />
+    <bpmn:sequenceFlow id="TF21" sourceRef="T_Export" targetRef="T_End" />
+    <bpmn:sequenceFlow id="TG2" sourceRef="T_Clean" targetRef="T_Moist" />
+    <bpmn:sequenceFlow id="TG3" name="&#62; 17% (сире) — сушіння" sourceRef="T_Moist" targetRef="T_Buffer" />
+    <bpmn:sequenceFlow id="TG4" name="≤ 14% — без доробки" sourceRef="T_Moist" targetRef="T_M" />
+    <bpmn:sequenceFlow id="TG5" name="&#62; 14%, ≤ 17% — вентилювання" sourceRef="T_Moist" targetRef="T_Vent" />
+    <bpmn:sequenceFlow id="TG6" sourceRef="T_Buffer" targetRef="T_Dry" />
+    <bpmn:sequenceFlow id="TG8" name="ні — ще прохід" sourceRef="T_DryOk" targetRef="T_Dry" />
+    <bpmn:sequenceFlow id="TG6b" sourceRef="T_Dry" targetRef="T_Measure" />
+    <bpmn:sequenceFlow id="TG7" sourceRef="T_Measure" targetRef="T_DryOk" />
+    <bpmn:sequenceFlow id="TG9" name="так" sourceRef="T_DryOk" targetRef="T_Clean2" />
+    <bpmn:sequenceFlow id="TG10" sourceRef="T_Vent" targetRef="T_M2" />
+    <bpmn:sequenceFlow id="TG9b" sourceRef="T_Clean2" targetRef="T_M" />
+    <bpmn:sequenceFlow id="TG11" sourceRef="T_M" targetRef="T_Store" />
+    <bpmn:sequenceFlow id="TG11b" sourceRef="T_Store" targetRef="T_M2" />
+    <bpmn:sequenceFlow id="TG12" sourceRef="T_M2" targetRef="T_Infest" />
+    <bpmn:sequenceFlow id="TG13" name="так" sourceRef="T_Infest" targetRef="T_Fumig" />
+    <bpmn:sequenceFlow id="TG14" name="ні" sourceRef="T_Infest" targetRef="T_M3" />
+    <bpmn:sequenceFlow id="TG15" sourceRef="T_Fumig" targetRef="T_M3" />
+    <bpmn:sequenceFlow id="TG16" sourceRef="T_M3" targetRef="T_Stored" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_ToBe">
+    <bpmndi:BPMNPlane id="Plane_ToBe" bpmnElement="Collaboration_ToBe">
+      <bpmndi:BPMNShape id="Participant_ToBe_di" bpmnElement="Participant_ToBe" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="5480" height="1520" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_7_di" bpmnElement="Lane_ToBe_7" isHorizontal="true">
+        <dc:Bounds x="190" y="1410" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_6_di" bpmnElement="Lane_ToBe_6" isHorizontal="true">
+        <dc:Bounds x="190" y="1220" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_5_di" bpmnElement="Lane_ToBe_5" isHorizontal="true">
+        <dc:Bounds x="190" y="1030" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_4_di" bpmnElement="Lane_ToBe_4" isHorizontal="true">
+        <dc:Bounds x="190" y="840" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_3_di" bpmnElement="Lane_ToBe_3" isHorizontal="true">
+        <dc:Bounds x="190" y="650" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_2_di" bpmnElement="Lane_ToBe_2" isHorizontal="true">
+        <dc:Bounds x="190" y="460" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_1_di" bpmnElement="Lane_ToBe_1" isHorizontal="true">
+        <dc:Bounds x="190" y="270" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_ToBe_0_di" bpmnElement="Lane_ToBe_0" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Start_di" bpmnElement="T_Start">
+        <dc:Bounds x="312" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="275" y="227" width="110" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Book_di" bpmnElement="T_Book">
+        <dc:Bounds x="455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Quota_di" bpmnElement="T_Quota" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="655" y="355" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Arrive_di" bpmnElement="T_Arrive">
+        <dc:Bounds x="855" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Gross_di" bpmnElement="T_Gross" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="1055" y="735" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_ToSampler_di" bpmnElement="T_ToSampler">
+        <dc:Bounds x="1255" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Sample_di" bpmnElement="T_Sample">
+        <dc:Bounds x="1455" y="545" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Lab_di" bpmnElement="T_Lab">
+        <dc:Bounds x="1655" y="545" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_QOk_di" bpmnElement="T_QOk" isMarkerVisible="true">
+        <dc:Bounds x="1905" y="370" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1865" y="424" width="131" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Reject_di" bpmnElement="T_Reject">
+        <dc:Bounds x="2112" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2074" y="227" width="113" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Assign_di" bpmnElement="T_Assign" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="2055" y="355" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Route_di" bpmnElement="T_Route">
+        <dc:Bounds x="2255" y="1305" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Unload_di" bpmnElement="T_Unload">
+        <dc:Bounds x="2455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Split_di" bpmnElement="T_Split">
+        <dc:Bounds x="2705" y="180" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_ToScale_di" bpmnElement="T_ToScale">
+        <dc:Bounds x="2855" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Tare_di" bpmnElement="T_Tare" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="3055" y="735" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Fork2_di" bpmnElement="T_Fork2">
+        <dc:Bounds x="3305" y="750" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Leave_di" bpmnElement="T_Leave">
+        <dc:Bounds x="3455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Left_di" bpmnElement="T_Left">
+        <dc:Bounds x="3712" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3697" y="227" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Credit_di" bpmnElement="T_Credit" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="3455" y="355" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Check_di" bpmnElement="T_Check">
+        <dc:Bounds x="3655" y="925" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Export_di" bpmnElement="T_Export" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="3855" y="355" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_End_di" bpmnElement="T_End">
+        <dc:Bounds x="4112" y="377" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4079" y="417" width="102" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Clean_di" bpmnElement="T_Clean">
+        <dc:Bounds x="2855" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Moist_di" bpmnElement="T_Moist" isMarkerVisible="true">
+        <dc:Bounds x="3105" y="1320" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3141" y="1240" width="148" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Buffer_di" bpmnElement="T_Buffer" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="3255" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Dry_di" bpmnElement="T_Dry" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="3455" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Measure_di" bpmnElement="T_Measure">
+        <dc:Bounds x="3655" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_DryOk_di" bpmnElement="T_DryOk" isMarkerVisible="true">
+        <dc:Bounds x="3905" y="1130" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3860" y="1096" width="140" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Vent_di" bpmnElement="T_Vent">
+        <dc:Bounds x="3255" y="1495" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Clean2_di" bpmnElement="T_Clean2">
+        <dc:Bounds x="4055" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_M_di" bpmnElement="T_M" isMarkerVisible="true">
+        <dc:Bounds x="4305" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Store_di" bpmnElement="T_Store" bioc:stroke="#1e4f8a" bioc:fill="#e8f0fb" color:background-color="#e8f0fb" color:border-color="#1e4f8a">
+        <dc:Bounds x="4455" y="1305" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_M2_di" bpmnElement="T_M2" isMarkerVisible="true">
+        <dc:Bounds x="4705" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Infest_di" bpmnElement="T_Infest" isMarkerVisible="true">
+        <dc:Bounds x="4905" y="1320" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4870" y="1286" width="120" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Fumig_di" bpmnElement="T_Fumig">
+        <dc:Bounds x="5055" y="1495" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_M3_di" bpmnElement="T_M3" isMarkerVisible="true">
+        <dc:Bounds x="5305" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Stored_di" bpmnElement="T_Stored">
+        <dc:Bounds x="5512" y="1327" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="5492" y="1367" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_0_di" bpmnElement="Ann_ToBe_0" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="455" y="86" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_1_di" bpmnElement="Ann_ToBe_1" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="855" y="86" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_2_di" bpmnElement="Ann_ToBe_2" bioc:stroke="#b26a00" bioc:fill="#fff3e0" color:background-color="#fff3e0" color:border-color="#b26a00">
+        <dc:Bounds x="1055" y="656" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_3_di" bpmnElement="Ann_ToBe_3" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="1655" y="466" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_4_di" bpmnElement="Ann_ToBe_4" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="2055" y="276" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_5_di" bpmnElement="Ann_ToBe_5" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="2255" y="1226" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_6_di" bpmnElement="Ann_ToBe_6" bioc:stroke="#b26a00" bioc:fill="#fff3e0" color:background-color="#fff3e0" color:border-color="#b26a00">
+        <dc:Bounds x="3455" y="86" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_7_di" bpmnElement="Ann_ToBe_7" bioc:stroke="#b26a00" bioc:fill="#fff3e0" color:background-color="#fff3e0" color:border-color="#b26a00">
+        <dc:Bounds x="3455" y="276" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_8_di" bpmnElement="Ann_ToBe_8" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="3655" y="846" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_9_di" bpmnElement="Ann_ToBe_9" bioc:stroke="#b26a00" bioc:fill="#fff3e0" color:background-color="#fff3e0" color:border-color="#b26a00">
+        <dc:Bounds x="3855" y="276" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_10_di" bpmnElement="Ann_ToBe_10" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="4055" y="276" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_11_di" bpmnElement="Ann_ToBe_11" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="3455" y="1036" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_12_di" bpmnElement="Ann_ToBe_12" bioc:stroke="#2e7d32" bioc:fill="#e8f5e9" color:background-color="#e8f5e9" color:border-color="#2e7d32">
+        <dc:Bounds x="3255" y="1416" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_13_di" bpmnElement="Ann_ToBe_13" bioc:stroke="#b26a00" bioc:fill="#fff3e0" color:background-color="#fff3e0" color:border-color="#b26a00">
+        <dc:Bounds x="5055" y="1416" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_ToBe_Legend_di" bpmnElement="Ann_ToBe_Legend">
+        <dc:Bounds x="160" y="1620" width="1300" height="186" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TF1_di" bpmnElement="TF1">
+        <di:waypoint x="348" y="205" />
+        <di:waypoint x="455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF2_di" bpmnElement="TF2">
+        <di:waypoint x="605" y="205" />
+        <di:waypoint x="630" y="205" />
+        <di:waypoint x="630" y="395" />
+        <di:waypoint x="655" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF3_di" bpmnElement="TF3">
+        <di:waypoint x="805" y="395" />
+        <di:waypoint x="830" y="395" />
+        <di:waypoint x="830" y="205" />
+        <di:waypoint x="855" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF4_di" bpmnElement="TF4">
+        <di:waypoint x="1005" y="205" />
+        <di:waypoint x="1030" y="205" />
+        <di:waypoint x="1030" y="775" />
+        <di:waypoint x="1055" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF5_di" bpmnElement="TF5">
+        <di:waypoint x="1205" y="775" />
+        <di:waypoint x="1230" y="775" />
+        <di:waypoint x="1230" y="205" />
+        <di:waypoint x="1255" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF6_di" bpmnElement="TF6">
+        <di:waypoint x="1405" y="205" />
+        <di:waypoint x="1430" y="205" />
+        <di:waypoint x="1430" y="585" />
+        <di:waypoint x="1455" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF7_di" bpmnElement="TF7">
+        <di:waypoint x="1605" y="585" />
+        <di:waypoint x="1655" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF8_di" bpmnElement="TF8">
+        <di:waypoint x="1805" y="585" />
+        <di:waypoint x="1830" y="585" />
+        <di:waypoint x="1830" y="395" />
+        <di:waypoint x="1905" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF10_di" bpmnElement="TF10">
+        <di:waypoint x="1930" y="370" />
+        <di:waypoint x="1930" y="205" />
+        <di:waypoint x="2112" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1972" y="358" width="9" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF11_di" bpmnElement="TF11">
+        <di:waypoint x="1955" y="395" />
+        <di:waypoint x="2055" y="395" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1993" y="381" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF12_di" bpmnElement="TF12">
+        <di:waypoint x="2205" y="395" />
+        <di:waypoint x="2230" y="395" />
+        <di:waypoint x="2230" y="1345" />
+        <di:waypoint x="2255" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF13_di" bpmnElement="TF13">
+        <di:waypoint x="2405" y="1345" />
+        <di:waypoint x="2430" y="1345" />
+        <di:waypoint x="2430" y="205" />
+        <di:waypoint x="2455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF13b_di" bpmnElement="TF13b">
+        <di:waypoint x="2605" y="205" />
+        <di:waypoint x="2705" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF14_di" bpmnElement="TF14">
+        <di:waypoint x="2755" y="205" />
+        <di:waypoint x="2855" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF14b_di" bpmnElement="TF14b">
+        <di:waypoint x="3005" y="205" />
+        <di:waypoint x="3030" y="205" />
+        <di:waypoint x="3030" y="775" />
+        <di:waypoint x="3055" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF15_di" bpmnElement="TF15">
+        <di:waypoint x="3205" y="775" />
+        <di:waypoint x="3305" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF16_di" bpmnElement="TF16">
+        <di:waypoint x="3330" y="750" />
+        <di:waypoint x="3330" y="205" />
+        <di:waypoint x="3455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF17_di" bpmnElement="TF17">
+        <di:waypoint x="3605" y="205" />
+        <di:waypoint x="3712" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF18_di" bpmnElement="TF18">
+        <di:waypoint x="3355" y="775" />
+        <di:waypoint x="3430" y="775" />
+        <di:waypoint x="3430" y="395" />
+        <di:waypoint x="3455" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF19_di" bpmnElement="TF19">
+        <di:waypoint x="3605" y="395" />
+        <di:waypoint x="3630" y="395" />
+        <di:waypoint x="3630" y="965" />
+        <di:waypoint x="3655" y="965" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF20_di" bpmnElement="TF20">
+        <di:waypoint x="3805" y="965" />
+        <di:waypoint x="3830" y="965" />
+        <di:waypoint x="3830" y="395" />
+        <di:waypoint x="3855" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TF21_di" bpmnElement="TF21">
+        <di:waypoint x="4005" y="395" />
+        <di:waypoint x="4112" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG1_di" bpmnElement="TG1">
+        <di:waypoint x="2730" y="230" />
+        <di:waypoint x="2730" y="1155" />
+        <di:waypoint x="2855" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG2_di" bpmnElement="TG2">
+        <di:waypoint x="3005" y="1155" />
+        <di:waypoint x="3030" y="1155" />
+        <di:waypoint x="3030" y="1345" />
+        <di:waypoint x="3105" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG3_di" bpmnElement="TG3">
+        <di:waypoint x="3130" y="1320" />
+        <di:waypoint x="3130" y="1155" />
+        <di:waypoint x="3255" y="1155" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3136" y="1302" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG4_di" bpmnElement="TG4">
+        <di:waypoint x="3155" y="1345" />
+        <di:waypoint x="4305" y="1345" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3168" y="1331" width="66" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG5_di" bpmnElement="TG5">
+        <di:waypoint x="3130" y="1370" />
+        <di:waypoint x="3130" y="1535" />
+        <di:waypoint x="3255" y="1535" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3135" y="1374" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG6_di" bpmnElement="TG6">
+        <di:waypoint x="3405" y="1155" />
+        <di:waypoint x="3455" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG6b_di" bpmnElement="TG6b">
+        <di:waypoint x="3605" y="1155" />
+        <di:waypoint x="3655" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG7_di" bpmnElement="TG7">
+        <di:waypoint x="3805" y="1155" />
+        <di:waypoint x="3905" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG8_di" bpmnElement="TG8">
+        <di:waypoint x="3930" y="1180" />
+        <di:waypoint x="3930" y="1210" />
+        <di:waypoint x="3530" y="1210" />
+        <di:waypoint x="3530" y="1195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3938" y="1184" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG9_di" bpmnElement="TG9">
+        <di:waypoint x="3955" y="1155" />
+        <di:waypoint x="4055" y="1155" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3993" y="1141" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG9b_di" bpmnElement="TG9b">
+        <di:waypoint x="4205" y="1155" />
+        <di:waypoint x="4330" y="1155" />
+        <di:waypoint x="4330" y="1320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG10_di" bpmnElement="TG10">
+        <di:waypoint x="3405" y="1535" />
+        <di:waypoint x="4730" y="1535" />
+        <di:waypoint x="4730" y="1370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG11_di" bpmnElement="TG11">
+        <di:waypoint x="4355" y="1345" />
+        <di:waypoint x="4455" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG11b_di" bpmnElement="TG11b">
+        <di:waypoint x="4605" y="1345" />
+        <di:waypoint x="4705" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG12_di" bpmnElement="TG12">
+        <di:waypoint x="4755" y="1345" />
+        <di:waypoint x="4905" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG13_di" bpmnElement="TG13">
+        <di:waypoint x="4930" y="1370" />
+        <di:waypoint x="4930" y="1535" />
+        <di:waypoint x="5055" y="1535" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4968" y="1374" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG14_di" bpmnElement="TG14">
+        <di:waypoint x="4955" y="1345" />
+        <di:waypoint x="5305" y="1345" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4997" y="1331" width="9" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG15_di" bpmnElement="TG15">
+        <di:waypoint x="5205" y="1535" />
+        <di:waypoint x="5330" y="1535" />
+        <di:waypoint x="5330" y="1370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TG16_di" bpmnElement="TG16">
+        <di:waypoint x="5355" y="1345" />
+        <di:waypoint x="5512" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_0_di" bpmnElement="Assoc_ToBe_0" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="530" y="165" />
+        <di:waypoint x="530" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_1_di" bpmnElement="Assoc_ToBe_1" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="930" y="165" />
+        <di:waypoint x="930" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_2_di" bpmnElement="Assoc_ToBe_2" bioc:stroke="#b26a00" color:border-color="#b26a00">
+        <di:waypoint x="1130" y="735" />
+        <di:waypoint x="1130" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_3_di" bpmnElement="Assoc_ToBe_3" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="1730" y="545" />
+        <di:waypoint x="1730" y="530" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_4_di" bpmnElement="Assoc_ToBe_4" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="2130" y="355" />
+        <di:waypoint x="2130" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_5_di" bpmnElement="Assoc_ToBe_5" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="2330" y="1305" />
+        <di:waypoint x="2330" y="1290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_6_di" bpmnElement="Assoc_ToBe_6" bioc:stroke="#b26a00" color:border-color="#b26a00">
+        <di:waypoint x="3530" y="165" />
+        <di:waypoint x="3530" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_7_di" bpmnElement="Assoc_ToBe_7" bioc:stroke="#b26a00" color:border-color="#b26a00">
+        <di:waypoint x="3530" y="355" />
+        <di:waypoint x="3530" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_8_di" bpmnElement="Assoc_ToBe_8" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="3730" y="925" />
+        <di:waypoint x="3730" y="910" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_9_di" bpmnElement="Assoc_ToBe_9" bioc:stroke="#b26a00" color:border-color="#b26a00">
+        <di:waypoint x="3930" y="355" />
+        <di:waypoint x="3930" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_10_di" bpmnElement="Assoc_ToBe_10" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="4130" y="377" />
+        <di:waypoint x="4130" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_11_di" bpmnElement="Assoc_ToBe_11" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="3530" y="1115" />
+        <di:waypoint x="3530" y="1100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_12_di" bpmnElement="Assoc_ToBe_12" bioc:stroke="#2e7d32" color:border-color="#2e7d32">
+        <di:waypoint x="3330" y="1495" />
+        <di:waypoint x="3330" y="1480" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_ToBe_13_di" bpmnElement="Assoc_ToBe_13" bioc:stroke="#b26a00" color:border-color="#b26a00">
+        <di:waypoint x="5130" y="1495" />
+        <di:waypoint x="5130" y="1480" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

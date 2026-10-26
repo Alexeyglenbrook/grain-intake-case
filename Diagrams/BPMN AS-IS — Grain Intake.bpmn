@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_AsIs" targetNamespace="http://portfolio.example/grain-intake" exporter="Camunda Modeler" exporterVersion="5.48.0">
+  <bpmn:collaboration id="Collaboration_AsIs">
+    <bpmn:participant id="Participant_AsIs" name="Елеватор — приймання зерна на зберігання (AS-IS)" processRef="Process_AsIs" />
+    <bpmn:textAnnotation id="Ann_AsIs_0">
+      <bpmn:text>ВМ-1: черга без запису — у сезон авто стоять годинами</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_0" associationDirection="None" sourceRef="A_Queue" targetRef="Ann_AsIs_0" />
+    <bpmn:textAnnotation id="Ann_AsIs_1">
+      <bpmn:text>ВМ-2: паперовий журнал — немає даних, хто і коли заїхав</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_1" associationDirection="None" sourceRef="A_Gate" targetRef="Ann_AsIs_1" />
+    <bpmn:textAnnotation id="Ann_AsIs_2">
+      <bpmn:text>ВМ-3: номер і вагу вводять вручну — помилки й зловживання</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_2" associationDirection="None" sourceRef="A_Gross" targetRef="Ann_AsIs_2" />
+    <bpmn:textAnnotation id="Ann_AsIs_3">
+      <bpmn:text>ВМ-4: результат аналізу йде папером — авто чекає</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_3" associationDirection="None" sourceRef="A_GetResult" targetRef="Ann_AsIs_3" />
+    <bpmn:textAnnotation id="Ann_AsIs_4">
+      <bpmn:text>ВМ-5: силос обирають з пам'яті — ризик змішування культур і класів</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_4" associationDirection="None" sourceRef="A_Silo" targetRef="Ann_AsIs_4" />
+    <bpmn:textAnnotation id="Ann_AsIs_5">
+      <bpmn:text>ВМ-6: ручний розрахунок — помилки й спори з поклажодавцем</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_5" associationDirection="None" sourceRef="A_Credit" targetRef="Ann_AsIs_5" />
+    <bpmn:textAnnotation id="Ann_AsIs_6">
+      <bpmn:text>ВМ-7: реєстр і залишки — вручну, розбіжності на інвентаризації</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_6" associationDirection="None" sourceRef="A_Registry" targetRef="Ann_AsIs_6" />
+    <bpmn:textAnnotation id="Ann_AsIs_7">
+      <bpmn:text>ВМ-8: водій їде без залікової ваги — поклажодавець потім дзвонить</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_7" associationDirection="None" sourceRef="A_Leave" targetRef="Ann_AsIs_7" />
+    <bpmn:textAnnotation id="Ann_AsIs_8">
+      <bpmn:text>ВМ-9: режим сушіння на око — пересушка або недосушка</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_AsIs_8" associationDirection="None" sourceRef="A_Dry" targetRef="Ann_AsIs_8" />
+    <bpmn:textAnnotation id="Ann_AsIs_Legend">
+      <bpmn:text>Типи задач: рука — вручну, без системи; людина — людина працює в системі; шестерня — виконує система автоматично.
+ВМ-N — вузьке місце: крок, де елеватор втрачає час, гроші або якість зерна. Номери збігаються з таблицею в розділі 3 кейсу.
+Після розвантаження процес ділиться: авто йде на ваги і виїжджає, а зерно — через доробку в силос. Маршрут доробки визначено аналізом лабораторії ще до розвантаження; розвилка його лише виконує.
+Складський документ (квитанція або свідоцтво) оформлюється не на кожне авто, а на партію — на підставі реєстру поклажодавця. Це окремий процес.
+Вологість — групи за Техрегламентом зернового складу (п. 6.9.4): середньої сухості 13,5–15,5%, вологе 15,5–17%, сире понад 17%. Базис 14% — приклад для кукурудзи. Межу між вентилюванням і сушінням узято як межу групи «сире»; конкретну межу встановлює технолог.
+Далі — зберігання, окремий процес: термопідвіски в силосі стежать за температурою; якщо зерно гріється — вентилюють або перекачують у інший силос.
+Схема — приймання на зберігання (поклажодавець). При закупівлі зерна елеватором кроки ті самі, але замість складського документа — документи купівлі-продажу, а оплата йде за заліковою вагою.</bpmn:text>
+    </bpmn:textAnnotation>
+  </bpmn:collaboration>
+  <bpmn:process id="Process_AsIs" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_AsIs">
+      <bpmn:lane id="Lane_AsIs_7" name="Силосний корпус">
+        <bpmn:flowNodeRef>A_Vent</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Fumig</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_6" name="Оператор приймання">
+        <bpmn:flowNodeRef>A_GetResult</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Silo</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Moist</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_M</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Store</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_M2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Infest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_M3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Stored</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_5" name="Доробка (сепаратор, сушарка)">
+        <bpmn:flowNodeRef>A_Clean</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Buffer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Dry</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Measure</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_DryOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Clean2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_4" name="Бухгалтерія / комірник">
+        <bpmn:flowNodeRef>A_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Registry</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_End</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_3" name="Вагова">
+        <bpmn:flowNodeRef>A_Gross</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Tare</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Fork2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_2" name="Лабораторія">
+        <bpmn:flowNodeRef>A_Sample</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Analyze</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_QOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Reject</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_1" name="КПП (охорона)">
+        <bpmn:flowNodeRef>A_Gate</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_AsIs_0" name="Водій / поклажодавець">
+        <bpmn:flowNodeRef>A_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Queue</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_ToGross</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_ToSampler</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Unload</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Split</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_ToScale</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Leave</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_Left</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="A_Start" name="Авто із зерном прибуло">
+      <bpmn:outgoing>AF1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:manualTask id="A_Queue" name="Чекати в черзі біля воріт">
+      <bpmn:incoming>AF1</bpmn:incoming>
+      <bpmn:outgoing>AF2</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Gate" name="Перевірити ТТН, записати авто в паперовий журнал">
+      <bpmn:incoming>AF2</bpmn:incoming>
+      <bpmn:outgoing>AF3</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_ToGross" name="Заїхати на ваги на в&#39;їзді">
+      <bpmn:incoming>AF3</bpmn:incoming>
+      <bpmn:outgoing>AF4</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="A_Gross" name="Зважити брутто, вручну ввести номер і вагу">
+      <bpmn:incoming>AF4</bpmn:incoming>
+      <bpmn:outgoing>AF5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:manualTask id="A_ToSampler" name="Під&#39;їхати до пробовідбірника">
+      <bpmn:incoming>AF5</bpmn:incoming>
+      <bpmn:outgoing>AF6</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Sample" name="Відібрати пробу з кузова">
+      <bpmn:incoming>AF6</bpmn:incoming>
+      <bpmn:outgoing>AF7</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Analyze" name="Аналіз: вологість, домішки, натура, зараженість, клас">
+      <bpmn:incoming>AF7</bpmn:incoming>
+      <bpmn:outgoing>AF8</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_QOk" name="Зерно в межах умов договору?">
+      <bpmn:incoming>AF8</bpmn:incoming>
+      <bpmn:outgoing>AF10</bpmn:outgoing>
+      <bpmn:outgoing>AF11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="A_Reject" name="Відмова, авто виїжджає">
+      <bpmn:incoming>AF10</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:manualTask id="A_GetResult" name="Отримати результат аналізу на папері / телефоном">
+      <bpmn:incoming>AF11</bpmn:incoming>
+      <bpmn:outgoing>AF12</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Silo" name="Обрати яму, доробку і силос «з пам&#39;яті»; заражене — окремо">
+      <bpmn:incoming>AF12</bpmn:incoming>
+      <bpmn:outgoing>AF13</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Unload" name="Розвантажити в завальну яму">
+      <bpmn:incoming>AF13</bpmn:incoming>
+      <bpmn:outgoing>AF13b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:parallelGateway id="A_Split" name="">
+      <bpmn:incoming>AF13b</bpmn:incoming>
+      <bpmn:outgoing>AF14</bpmn:outgoing>
+      <bpmn:outgoing>AG1</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:manualTask id="A_ToScale" name="Заїхати на ваги для зважування тари">
+      <bpmn:incoming>AF14</bpmn:incoming>
+      <bpmn:outgoing>AF14b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="A_Tare" name="Зважити тару, порахувати нетто, підписати ТТН">
+      <bpmn:incoming>AF14b</bpmn:incoming>
+      <bpmn:outgoing>AF15</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="A_Fork2" name="">
+      <bpmn:incoming>AF15</bpmn:incoming>
+      <bpmn:outgoing>AF16</bpmn:outgoing>
+      <bpmn:outgoing>AF18</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:manualTask id="A_Leave" name="Забрати примірник ТТН перевізника, виїхати">
+      <bpmn:incoming>AF16</bpmn:incoming>
+      <bpmn:outgoing>AF17</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:endEvent id="A_Left" name="Авто виїхало">
+      <bpmn:incoming>AF17</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="A_Credit" name="Порахувати залікову вагу в Excel (формула Дюваля)">
+      <bpmn:incoming>AF18</bpmn:incoming>
+      <bpmn:outgoing>AF19</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:manualTask id="A_Registry" name="Внести в реєстр поклажодавця і журнал залишків">
+      <bpmn:incoming>AF19</bpmn:incoming>
+      <bpmn:outgoing>AF20</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:endEvent id="A_End" name="Машину враховано в реєстрі">
+      <bpmn:incoming>AF20</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:manualTask id="A_Clean" name="Попереднє очищення на сепараторі, зважити відходи">
+      <bpmn:incoming>AG1</bpmn:incoming>
+      <bpmn:outgoing>AG2</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_Moist" name="Вологість за аналізом (базис 14%)?">
+      <bpmn:incoming>AG2</bpmn:incoming>
+      <bpmn:outgoing>AG3</bpmn:outgoing>
+      <bpmn:outgoing>AG4</bpmn:outgoing>
+      <bpmn:outgoing>AG5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="A_Buffer" name="Накопичити в буферному силосі сирого зерна">
+      <bpmn:incoming>AG3</bpmn:incoming>
+      <bpmn:outgoing>AG6</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Dry" name="Просушити на зерносушарці, режим «на око»">
+      <bpmn:incoming>AG6</bpmn:incoming>
+      <bpmn:incoming>AG8</bpmn:incoming>
+      <bpmn:outgoing>AG6b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Measure" name="Відібрати пробу на виході сушарки, віднести в лабораторію">
+      <bpmn:incoming>AG6b</bpmn:incoming>
+      <bpmn:outgoing>AG7</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_DryOk" name="Вологість на виході ≤ 14%?">
+      <bpmn:incoming>AG7</bpmn:incoming>
+      <bpmn:outgoing>AG8</bpmn:outgoing>
+      <bpmn:outgoing>AG9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="A_Vent" name="Подати в силос з аерацією, увімкнути вентилювання">
+      <bpmn:incoming>AG5</bpmn:incoming>
+      <bpmn:outgoing>AG10</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="A_Clean2" name="Вторинне очищення після сушіння">
+      <bpmn:incoming>AG9</bpmn:incoming>
+      <bpmn:outgoing>AG9b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_M" name="">
+      <bpmn:incoming>AG4</bpmn:incoming>
+      <bpmn:incoming>AG9b</bpmn:incoming>
+      <bpmn:outgoing>AG11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="A_Store" name="Подати зерно в силос">
+      <bpmn:incoming>AG11</bpmn:incoming>
+      <bpmn:outgoing>AG11b</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_M2" name="">
+      <bpmn:incoming>AG10</bpmn:incoming>
+      <bpmn:incoming>AG11b</bpmn:incoming>
+      <bpmn:outgoing>AG12</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="A_Infest" name="Заражено шкідниками?">
+      <bpmn:incoming>AG12</bpmn:incoming>
+      <bpmn:outgoing>AG13</bpmn:outgoing>
+      <bpmn:outgoing>AG14</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="A_Fumig" name="Запланувати знезараження силосу (послуга за договором)">
+      <bpmn:incoming>AG13</bpmn:incoming>
+      <bpmn:outgoing>AG15</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="A_M3" name="">
+      <bpmn:incoming>AG14</bpmn:incoming>
+      <bpmn:incoming>AG15</bpmn:incoming>
+      <bpmn:outgoing>AG16</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="A_Stored" name="Зерно в силосі">
+      <bpmn:incoming>AG16</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="AF1" sourceRef="A_Start" targetRef="A_Queue" />
+    <bpmn:sequenceFlow id="AF2" sourceRef="A_Queue" targetRef="A_Gate" />
+    <bpmn:sequenceFlow id="AF3" sourceRef="A_Gate" targetRef="A_ToGross" />
+    <bpmn:sequenceFlow id="AF4" sourceRef="A_ToGross" targetRef="A_Gross" />
+    <bpmn:sequenceFlow id="AF5" sourceRef="A_Gross" targetRef="A_ToSampler" />
+    <bpmn:sequenceFlow id="AF6" sourceRef="A_ToSampler" targetRef="A_Sample" />
+    <bpmn:sequenceFlow id="AF7" sourceRef="A_Sample" targetRef="A_Analyze" />
+    <bpmn:sequenceFlow id="AF8" sourceRef="A_Analyze" targetRef="A_QOk" />
+    <bpmn:sequenceFlow id="AF10" name="ні" sourceRef="A_QOk" targetRef="A_Reject" />
+    <bpmn:sequenceFlow id="AF11" name="так" sourceRef="A_QOk" targetRef="A_GetResult" />
+    <bpmn:sequenceFlow id="AF12" sourceRef="A_GetResult" targetRef="A_Silo" />
+    <bpmn:sequenceFlow id="AF13" sourceRef="A_Silo" targetRef="A_Unload" />
+    <bpmn:sequenceFlow id="AF13b" sourceRef="A_Unload" targetRef="A_Split" />
+    <bpmn:sequenceFlow id="AF14" sourceRef="A_Split" targetRef="A_ToScale" />
+    <bpmn:sequenceFlow id="AG1" sourceRef="A_Split" targetRef="A_Clean" />
+    <bpmn:sequenceFlow id="AF14b" sourceRef="A_ToScale" targetRef="A_Tare" />
+    <bpmn:sequenceFlow id="AF15" sourceRef="A_Tare" targetRef="A_Fork2" />
+    <bpmn:sequenceFlow id="AF16" sourceRef="A_Fork2" targetRef="A_Leave" />
+    <bpmn:sequenceFlow id="AF18" sourceRef="A_Fork2" targetRef="A_Credit" />
+    <bpmn:sequenceFlow id="AF17" sourceRef="A_Leave" targetRef="A_Left" />
+    <bpmn:sequenceFlow id="AF19" sourceRef="A_Credit" targetRef="A_Registry" />
+    <bpmn:sequenceFlow id="AF20" sourceRef="A_Registry" targetRef="A_End" />
+    <bpmn:sequenceFlow id="AG2" sourceRef="A_Clean" targetRef="A_Moist" />
+    <bpmn:sequenceFlow id="AG3" name="&#62; 17% (сире) — сушіння" sourceRef="A_Moist" targetRef="A_Buffer" />
+    <bpmn:sequenceFlow id="AG4" name="≤ 14% — без доробки" sourceRef="A_Moist" targetRef="A_M" />
+    <bpmn:sequenceFlow id="AG5" name="&#62; 14%, ≤ 17% — вентилювання" sourceRef="A_Moist" targetRef="A_Vent" />
+    <bpmn:sequenceFlow id="AG6" sourceRef="A_Buffer" targetRef="A_Dry" />
+    <bpmn:sequenceFlow id="AG8" name="ні — ще прохід" sourceRef="A_DryOk" targetRef="A_Dry" />
+    <bpmn:sequenceFlow id="AG6b" sourceRef="A_Dry" targetRef="A_Measure" />
+    <bpmn:sequenceFlow id="AG7" sourceRef="A_Measure" targetRef="A_DryOk" />
+    <bpmn:sequenceFlow id="AG9" name="так" sourceRef="A_DryOk" targetRef="A_Clean2" />
+    <bpmn:sequenceFlow id="AG10" sourceRef="A_Vent" targetRef="A_M2" />
+    <bpmn:sequenceFlow id="AG9b" sourceRef="A_Clean2" targetRef="A_M" />
+    <bpmn:sequenceFlow id="AG11" sourceRef="A_M" targetRef="A_Store" />
+    <bpmn:sequenceFlow id="AG11b" sourceRef="A_Store" targetRef="A_M2" />
+    <bpmn:sequenceFlow id="AG12" sourceRef="A_M2" targetRef="A_Infest" />
+    <bpmn:sequenceFlow id="AG13" name="так" sourceRef="A_Infest" targetRef="A_Fumig" />
+    <bpmn:sequenceFlow id="AG14" name="ні" sourceRef="A_Infest" targetRef="A_M3" />
+    <bpmn:sequenceFlow id="AG15" sourceRef="A_Fumig" targetRef="A_M3" />
+    <bpmn:sequenceFlow id="AG16" sourceRef="A_M3" targetRef="A_Stored" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_AsIs">
+    <bpmndi:BPMNPlane id="Plane_AsIs" bpmnElement="Collaboration_AsIs">
+      <bpmndi:BPMNShape id="Participant_AsIs_di" bpmnElement="Participant_AsIs" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="5480" height="1520" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_7_di" bpmnElement="Lane_AsIs_7" isHorizontal="true">
+        <dc:Bounds x="190" y="1410" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_6_di" bpmnElement="Lane_AsIs_6" isHorizontal="true">
+        <dc:Bounds x="190" y="1220" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_5_di" bpmnElement="Lane_AsIs_5" isHorizontal="true">
+        <dc:Bounds x="190" y="1030" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_4_di" bpmnElement="Lane_AsIs_4" isHorizontal="true">
+        <dc:Bounds x="190" y="840" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_3_di" bpmnElement="Lane_AsIs_3" isHorizontal="true">
+        <dc:Bounds x="190" y="650" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_2_di" bpmnElement="Lane_AsIs_2" isHorizontal="true">
+        <dc:Bounds x="190" y="460" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_1_di" bpmnElement="Lane_AsIs_1" isHorizontal="true">
+        <dc:Bounds x="190" y="270" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_AsIs_0_di" bpmnElement="Lane_AsIs_0" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="5450" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Start_di" bpmnElement="A_Start">
+        <dc:Bounds x="312" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="270" y="227" width="120" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Queue_di" bpmnElement="A_Queue">
+        <dc:Bounds x="455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Gate_di" bpmnElement="A_Gate">
+        <dc:Bounds x="655" y="355" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_ToGross_di" bpmnElement="A_ToGross">
+        <dc:Bounds x="855" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Gross_di" bpmnElement="A_Gross">
+        <dc:Bounds x="1055" y="735" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_ToSampler_di" bpmnElement="A_ToSampler">
+        <dc:Bounds x="1255" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Sample_di" bpmnElement="A_Sample">
+        <dc:Bounds x="1455" y="545" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Analyze_di" bpmnElement="A_Analyze">
+        <dc:Bounds x="1655" y="545" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_QOk_di" bpmnElement="A_QOk" isMarkerVisible="true">
+        <dc:Bounds x="1905" y="560" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1878" y="526" width="104" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Reject_di" bpmnElement="A_Reject">
+        <dc:Bounds x="2112" y="567" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2069" y="607" width="122" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_GetResult_di" bpmnElement="A_GetResult">
+        <dc:Bounds x="2055" y="1305" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Silo_di" bpmnElement="A_Silo">
+        <dc:Bounds x="2255" y="1305" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Unload_di" bpmnElement="A_Unload">
+        <dc:Bounds x="2455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Split_di" bpmnElement="A_Split">
+        <dc:Bounds x="2705" y="180" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_ToScale_di" bpmnElement="A_ToScale">
+        <dc:Bounds x="2855" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Tare_di" bpmnElement="A_Tare">
+        <dc:Bounds x="3055" y="735" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Fork2_di" bpmnElement="A_Fork2">
+        <dc:Bounds x="3305" y="750" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Leave_di" bpmnElement="A_Leave">
+        <dc:Bounds x="3455" y="165" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Left_di" bpmnElement="A_Left">
+        <dc:Bounds x="3712" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3697" y="227" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Credit_di" bpmnElement="A_Credit">
+        <dc:Bounds x="3455" y="925" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Registry_di" bpmnElement="A_Registry">
+        <dc:Bounds x="3655" y="925" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_End_di" bpmnElement="A_End">
+        <dc:Bounds x="3912" y="947" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3876" y="987" width="108" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Clean_di" bpmnElement="A_Clean">
+        <dc:Bounds x="2855" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Moist_di" bpmnElement="A_Moist" isMarkerVisible="true">
+        <dc:Bounds x="3105" y="1320" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3141" y="1240" width="148" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Buffer_di" bpmnElement="A_Buffer">
+        <dc:Bounds x="3255" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Dry_di" bpmnElement="A_Dry">
+        <dc:Bounds x="3455" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Measure_di" bpmnElement="A_Measure">
+        <dc:Bounds x="3655" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_DryOk_di" bpmnElement="A_DryOk" isMarkerVisible="true">
+        <dc:Bounds x="3905" y="1130" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3860" y="1096" width="140" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Vent_di" bpmnElement="A_Vent">
+        <dc:Bounds x="3255" y="1495" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Clean2_di" bpmnElement="A_Clean2">
+        <dc:Bounds x="4055" y="1115" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_M_di" bpmnElement="A_M" isMarkerVisible="true">
+        <dc:Bounds x="4305" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Store_di" bpmnElement="A_Store">
+        <dc:Bounds x="4455" y="1305" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_M2_di" bpmnElement="A_M2" isMarkerVisible="true">
+        <dc:Bounds x="4705" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Infest_di" bpmnElement="A_Infest" isMarkerVisible="true">
+        <dc:Bounds x="4905" y="1320" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4870" y="1286" width="120" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Fumig_di" bpmnElement="A_Fumig">
+        <dc:Bounds x="5055" y="1495" width="150" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_M3_di" bpmnElement="A_M3" isMarkerVisible="true">
+        <dc:Bounds x="5305" y="1320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_Stored_di" bpmnElement="A_Stored">
+        <dc:Bounds x="5512" y="1327" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="5492" y="1367" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="AF1_di" bpmnElement="AF1">
+        <di:waypoint x="348" y="205" />
+        <di:waypoint x="455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF2_di" bpmnElement="AF2">
+        <di:waypoint x="605" y="205" />
+        <di:waypoint x="630" y="205" />
+        <di:waypoint x="630" y="395" />
+        <di:waypoint x="655" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF3_di" bpmnElement="AF3">
+        <di:waypoint x="805" y="395" />
+        <di:waypoint x="830" y="395" />
+        <di:waypoint x="830" y="205" />
+        <di:waypoint x="855" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF4_di" bpmnElement="AF4">
+        <di:waypoint x="1005" y="205" />
+        <di:waypoint x="1030" y="205" />
+        <di:waypoint x="1030" y="775" />
+        <di:waypoint x="1055" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF5_di" bpmnElement="AF5">
+        <di:waypoint x="1205" y="775" />
+        <di:waypoint x="1230" y="775" />
+        <di:waypoint x="1230" y="205" />
+        <di:waypoint x="1255" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF6_di" bpmnElement="AF6">
+        <di:waypoint x="1405" y="205" />
+        <di:waypoint x="1430" y="205" />
+        <di:waypoint x="1430" y="585" />
+        <di:waypoint x="1455" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF7_di" bpmnElement="AF7">
+        <di:waypoint x="1605" y="585" />
+        <di:waypoint x="1655" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF8_di" bpmnElement="AF8">
+        <di:waypoint x="1805" y="585" />
+        <di:waypoint x="1905" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF10_di" bpmnElement="AF10">
+        <di:waypoint x="1955" y="585" />
+        <di:waypoint x="2112" y="585" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1997" y="571" width="9" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF11_di" bpmnElement="AF11">
+        <di:waypoint x="1930" y="610" />
+        <di:waypoint x="1930" y="1345" />
+        <di:waypoint x="2055" y="1345" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1968" y="614" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF12_di" bpmnElement="AF12">
+        <di:waypoint x="2205" y="1345" />
+        <di:waypoint x="2255" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF13_di" bpmnElement="AF13">
+        <di:waypoint x="2405" y="1345" />
+        <di:waypoint x="2430" y="1345" />
+        <di:waypoint x="2430" y="205" />
+        <di:waypoint x="2455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF13b_di" bpmnElement="AF13b">
+        <di:waypoint x="2605" y="205" />
+        <di:waypoint x="2705" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF14_di" bpmnElement="AF14">
+        <di:waypoint x="2755" y="205" />
+        <di:waypoint x="2855" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG1_di" bpmnElement="AG1">
+        <di:waypoint x="2730" y="230" />
+        <di:waypoint x="2730" y="1155" />
+        <di:waypoint x="2855" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF14b_di" bpmnElement="AF14b">
+        <di:waypoint x="3005" y="205" />
+        <di:waypoint x="3030" y="205" />
+        <di:waypoint x="3030" y="775" />
+        <di:waypoint x="3055" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF15_di" bpmnElement="AF15">
+        <di:waypoint x="3205" y="775" />
+        <di:waypoint x="3305" y="775" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF16_di" bpmnElement="AF16">
+        <di:waypoint x="3330" y="750" />
+        <di:waypoint x="3330" y="205" />
+        <di:waypoint x="3455" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF18_di" bpmnElement="AF18">
+        <di:waypoint x="3330" y="800" />
+        <di:waypoint x="3330" y="965" />
+        <di:waypoint x="3455" y="965" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF17_di" bpmnElement="AF17">
+        <di:waypoint x="3605" y="205" />
+        <di:waypoint x="3712" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF19_di" bpmnElement="AF19">
+        <di:waypoint x="3605" y="965" />
+        <di:waypoint x="3655" y="965" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AF20_di" bpmnElement="AF20">
+        <di:waypoint x="3805" y="965" />
+        <di:waypoint x="3912" y="965" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG2_di" bpmnElement="AG2">
+        <di:waypoint x="3005" y="1155" />
+        <di:waypoint x="3030" y="1155" />
+        <di:waypoint x="3030" y="1345" />
+        <di:waypoint x="3105" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG3_di" bpmnElement="AG3">
+        <di:waypoint x="3130" y="1320" />
+        <di:waypoint x="3130" y="1155" />
+        <di:waypoint x="3255" y="1155" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3136" y="1302" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG4_di" bpmnElement="AG4">
+        <di:waypoint x="3155" y="1345" />
+        <di:waypoint x="4305" y="1345" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3168" y="1331" width="66" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG5_di" bpmnElement="AG5">
+        <di:waypoint x="3130" y="1370" />
+        <di:waypoint x="3130" y="1535" />
+        <di:waypoint x="3255" y="1535" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3135" y="1374" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG6_di" bpmnElement="AG6">
+        <di:waypoint x="3405" y="1155" />
+        <di:waypoint x="3455" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG8_di" bpmnElement="AG8">
+        <di:waypoint x="3930" y="1180" />
+        <di:waypoint x="3930" y="1210" />
+        <di:waypoint x="3530" y="1210" />
+        <di:waypoint x="3530" y="1195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3938" y="1184" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG6b_di" bpmnElement="AG6b">
+        <di:waypoint x="3605" y="1155" />
+        <di:waypoint x="3655" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG7_di" bpmnElement="AG7">
+        <di:waypoint x="3805" y="1155" />
+        <di:waypoint x="3905" y="1155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG9_di" bpmnElement="AG9">
+        <di:waypoint x="3955" y="1155" />
+        <di:waypoint x="4055" y="1155" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3993" y="1141" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG10_di" bpmnElement="AG10">
+        <di:waypoint x="3405" y="1535" />
+        <di:waypoint x="4730" y="1535" />
+        <di:waypoint x="4730" y="1370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG9b_di" bpmnElement="AG9b">
+        <di:waypoint x="4205" y="1155" />
+        <di:waypoint x="4330" y="1155" />
+        <di:waypoint x="4330" y="1320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG11_di" bpmnElement="AG11">
+        <di:waypoint x="4355" y="1345" />
+        <di:waypoint x="4455" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG11b_di" bpmnElement="AG11b">
+        <di:waypoint x="4605" y="1345" />
+        <di:waypoint x="4705" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG12_di" bpmnElement="AG12">
+        <di:waypoint x="4755" y="1345" />
+        <di:waypoint x="4905" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG13_di" bpmnElement="AG13">
+        <di:waypoint x="4930" y="1370" />
+        <di:waypoint x="4930" y="1535" />
+        <di:waypoint x="5055" y="1535" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4968" y="1374" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG14_di" bpmnElement="AG14">
+        <di:waypoint x="4955" y="1345" />
+        <di:waypoint x="5305" y="1345" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4997" y="1331" width="9" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG15_di" bpmnElement="AG15">
+        <di:waypoint x="5205" y="1535" />
+        <di:waypoint x="5330" y="1535" />
+        <di:waypoint x="5330" y="1370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="AG16_di" bpmnElement="AG16">
+        <di:waypoint x="5355" y="1345" />
+        <di:waypoint x="5512" y="1345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_0_di" bpmnElement="Assoc_AsIs_0" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="530" y="165" />
+        <di:waypoint x="530" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_1_di" bpmnElement="Assoc_AsIs_1" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="730" y="355" />
+        <di:waypoint x="730" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_2_di" bpmnElement="Assoc_AsIs_2" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="1130" y="735" />
+        <di:waypoint x="1130" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_3_di" bpmnElement="Assoc_AsIs_3" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="2130" y="1305" />
+        <di:waypoint x="2130" y="1290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_4_di" bpmnElement="Assoc_AsIs_4" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="2330" y="1305" />
+        <di:waypoint x="2330" y="1290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_7_di" bpmnElement="Assoc_AsIs_7" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="3530" y="165" />
+        <di:waypoint x="3530" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_5_di" bpmnElement="Assoc_AsIs_5" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="3530" y="925" />
+        <di:waypoint x="3530" y="910" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_6_di" bpmnElement="Assoc_AsIs_6" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="3730" y="925" />
+        <di:waypoint x="3730" y="910" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_AsIs_8_di" bpmnElement="Assoc_AsIs_8" bioc:stroke="#c62828" color:border-color="#c62828">
+        <di:waypoint x="3530" y="1115" />
+        <di:waypoint x="3530" y="1100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Ann_AsIs_0_di" bpmnElement="Ann_AsIs_0" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="455" y="86" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_1_di" bpmnElement="Ann_AsIs_1" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="655" y="276" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_2_di" bpmnElement="Ann_AsIs_2" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="1055" y="656" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_3_di" bpmnElement="Ann_AsIs_3" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="2055" y="1226" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_4_di" bpmnElement="Ann_AsIs_4" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="2255" y="1226" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_5_di" bpmnElement="Ann_AsIs_5" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="3455" y="846" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_6_di" bpmnElement="Ann_AsIs_6" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="3655" y="846" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_7_di" bpmnElement="Ann_AsIs_7" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="3455" y="86" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_8_di" bpmnElement="Ann_AsIs_8" bioc:stroke="#c62828" bioc:fill="#ffebee" color:background-color="#ffebee" color:border-color="#c62828">
+        <dc:Bounds x="3455" y="1036" width="150" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ann_AsIs_Legend_di" bpmnElement="Ann_AsIs_Legend">
+        <dc:Bounds x="160" y="1620" width="1300" height="164" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

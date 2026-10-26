@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="5520" height="1752" viewBox="0 0 5520 1752" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<rect width="5520" height="1752" fill="#ffffff"/>
+<rect x="20" y="20" width="5480" height="1520" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="39" y="780" font-size="14" font-weight="600" text-anchor="middle" transform="rotate(-90 39 780)">Елеватор — приймання зерна на зберігання (TO-BE, продукти osnova / smart)</text>
+<rect x="50" y="20" width="5450" height="190" fill="#ffffff" stroke="#222"/>
+<line x1="80" y1="20" x2="80" y2="210" stroke="#222"/>
+<text x="69" y="115" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 115)">Водій / поклажодавець</text>
+<rect x="50" y="210" width="5450" height="190" fill="#fafafa" stroke="#222"/>
+<line x1="80" y1="210" x2="80" y2="400" stroke="#222"/>
+<text x="69" y="305" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 305)">Система osnova</text>
+<rect x="50" y="400" width="5450" height="190" fill="#ffffff" stroke="#222"/>
+<line x1="80" y1="400" x2="80" y2="590" stroke="#222"/>
+<text x="69" y="495" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 495)">Лабораторія</text>
+<rect x="50" y="590" width="5450" height="190" fill="#fafafa" stroke="#222"/>
+<line x1="80" y1="590" x2="80" y2="780" stroke="#222"/>
+<text x="69" y="685" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 685)">Вагова</text>
+<rect x="50" y="780" width="5450" height="190" fill="#ffffff" stroke="#222"/>
+<line x1="80" y1="780" x2="80" y2="970" stroke="#222"/>
+<text x="69" y="875" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 875)">Бухгалтерія</text>
+<rect x="50" y="970" width="5450" height="190" fill="#fafafa" stroke="#222"/>
+<line x1="80" y1="970" x2="80" y2="1160" stroke="#222"/>
+<text x="69" y="1065" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 1065)">Доробка (сепаратор, сушарка)</text>
+<rect x="50" y="1160" width="5450" height="190" fill="#ffffff" stroke="#222"/>
+<line x1="80" y1="1160" x2="80" y2="1350" stroke="#222"/>
+<text x="69" y="1255" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 1255)">Оператор SCADA</text>
+<rect x="50" y="1350" width="5450" height="190" fill="#fafafa" stroke="#222"/>
+<line x1="80" y1="1350" x2="80" y2="1540" stroke="#222"/>
+<text x="69" y="1445" font-size="12.5" text-anchor="middle" transform="rotate(-90 69 1445)">Силосний корпус</text>
+<rect x="315" y="26" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M327,26 L315,26 L315,90 L327,90" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="390" y1="90" x2="390" y2="105" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="321" y="40" font-size="11" fill="#2e7d32">FG-01 · osnova.бронь ·</text>
+<text x="321" y="53" font-size="11" fill="#2e7d32">Fit (усуває ВМ-1)</text>
+<rect x="715" y="26" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M727,26 L715,26 L715,90 L727,90" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="790" y1="90" x2="790" y2="105" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="721" y="40" font-size="11" fill="#2e7d32">FG-02 ·</text>
+<text x="721" y="53" font-size="11" fill="#2e7d32">osnova.поклажедатель ·</text>
+<text x="721" y="66" font-size="11" fill="#2e7d32">Fit + RFID (ВМ-1,</text>
+<text x="721" y="79" font-size="11" fill="#2e7d32">ВМ-2)</text>
+<rect x="915" y="596" width="150" height="64" fill="#fff3e0" stroke="none"/>
+<path d="M927,596 L915,596 L915,660 L927,660" fill="none" stroke="#b26a00" stroke-width="1.5"/>
+<line x1="990" y1="660" x2="990" y2="675" stroke="#b26a00" stroke-dasharray="3,3"/>
+<text x="921" y="610" font-size="11" fill="#b26a00">FG-03 · автоваги</text>
+<text x="921" y="623" font-size="11" fill="#b26a00">клієнта · Інтеграція →</text>
+<text x="921" y="636" font-size="11" fill="#b26a00">US-01 (ВМ-3)</text>
+<rect x="1515" y="406" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M1527,406 L1515,406 L1515,470 L1527,470" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="1590" y1="470" x2="1590" y2="485" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="1521" y="420" font-size="11" fill="#2e7d32">FG-04 ·</text>
+<text x="1521" y="433" font-size="11" fill="#2e7d32">osnova.предприятие ·</text>
+<text x="1521" y="446" font-size="11" fill="#2e7d32">Налаштування (ВМ-4)</text>
+<rect x="1915" y="216" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M1927,216 L1915,216 L1915,280 L1927,280" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="1990" y1="280" x2="1990" y2="295" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="1921" y="230" font-size="11" fill="#2e7d32">FG-05, FG-06 ·</text>
+<text x="1921" y="243" font-size="11" fill="#2e7d32">osnova.предприятие</text>
+<text x="1921" y="256" font-size="11" fill="#2e7d32">(ВМ-5)</text>
+<rect x="2115" y="1166" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M2127,1166 L2115,1166 L2115,1230 L2127,1230" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="2190" y1="1230" x2="2190" y2="1245" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="2121" y="1180" font-size="11" fill="#2e7d32">FG-07 · smart.сдау ·</text>
+<text x="2121" y="1193" font-size="11" fill="#2e7d32">Fit, блокує змішування</text>
+<text x="2121" y="1206" font-size="11" fill="#2e7d32">(ВМ-5)</text>
+<rect x="3315" y="26" width="150" height="64" fill="#fff3e0" stroke="none"/>
+<path d="M3327,26 L3315,26 L3315,90 L3327,90" fill="none" stroke="#b26a00" stroke-width="1.5"/>
+<line x1="3390" y1="90" x2="3390" y2="105" stroke="#b26a00" stroke-dasharray="3,3"/>
+<text x="3321" y="40" font-size="11" fill="#b26a00">FG-13 · е-ТТН ·</text>
+<text x="3321" y="53" font-size="11" fill="#b26a00">уточнити в ZEO</text>
+<rect x="3315" y="216" width="150" height="64" fill="#fff3e0" stroke="none"/>
+<path d="M3327,216 L3315,216 L3315,280 L3327,280" fill="none" stroke="#b26a00" stroke-width="1.5"/>
+<line x1="3390" y1="280" x2="3390" y2="295" stroke="#b26a00" stroke-dasharray="3,3"/>
+<text x="3321" y="230" font-size="11" fill="#b26a00">FG-08 Налаштування ·</text>
+<text x="3321" y="243" font-size="11" fill="#b26a00">FG-09 Gap → US-02</text>
+<text x="3321" y="256" font-size="11" fill="#b26a00">(ВМ-6)</text>
+<rect x="3515" y="786" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M3527,786 L3515,786 L3515,850 L3527,850" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="3590" y1="850" x2="3590" y2="865" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="3521" y="800" font-size="11" fill="#2e7d32">FG-12 · реєстр і</text>
+<text x="3521" y="813" font-size="11" fill="#2e7d32">залишки онлайн · Fit</text>
+<text x="3521" y="826" font-size="11" fill="#2e7d32">(ВМ-7)</text>
+<rect x="3715" y="216" width="150" height="64" fill="#fff3e0" stroke="none"/>
+<path d="M3727,216 L3715,216 L3715,280 L3727,280" fill="none" stroke="#b26a00" stroke-width="1.5"/>
+<line x1="3790" y1="280" x2="3790" y2="295" stroke="#b26a00" stroke-dasharray="3,3"/>
+<text x="3721" y="230" font-size="11" fill="#b26a00">FG-10 · BAS клієнта ·</text>
+<text x="3721" y="243" font-size="11" fill="#b26a00">Інтеграція → US-03</text>
+<rect x="3915" y="216" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M3927,216 L3915,216 L3915,280 L3927,280" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="3990" y1="280" x2="3990" y2="317" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="3921" y="230" font-size="11" fill="#2e7d32">FG-11 · вага, якість і</text>
+<text x="3921" y="243" font-size="11" fill="#2e7d32">залікова вага в</text>
+<text x="3921" y="256" font-size="11" fill="#2e7d32">Telegram · Fit (ВМ-8)</text>
+<rect x="3315" y="976" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M3327,976 L3315,976 L3315,1040 L3327,1040" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="3390" y1="1040" x2="3390" y2="1055" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="3321" y="990" font-size="11" fill="#2e7d32">FG-15 · smart.сдау +</text>
+<text x="3321" y="1003" font-size="11" fill="#2e7d32">модуль сушарок · Fit,</text>
+<text x="3321" y="1016" font-size="11" fill="#2e7d32">дод. модуль (ВМ-9)</text>
+<rect x="3115" y="1356" width="150" height="64" fill="#e8f5e9" stroke="none"/>
+<path d="M3127,1356 L3115,1356 L3115,1420 L3127,1420" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+<line x1="3190" y1="1420" x2="3190" y2="1435" stroke="#2e7d32" stroke-dasharray="3,3"/>
+<text x="3121" y="1370" font-size="11" fill="#2e7d32">FG-16 ·</text>
+<text x="3121" y="1383" font-size="11" fill="#2e7d32">smart.термометрія</text>
+<text x="3121" y="1396" font-size="11" fill="#2e7d32">стежить за нагрівом ·</text>
+<text x="3121" y="1409" font-size="11" fill="#2e7d32">Fit</text>
+<rect x="4915" y="1356" width="150" height="64" fill="#fff3e0" stroke="none"/>
+<path d="M4927,1356 L4915,1356 L4915,1420 L4927,1420" fill="none" stroke="#b26a00" stroke-width="1.5"/>
+<line x1="4990" y1="1420" x2="4990" y2="1435" stroke="#b26a00" stroke-dasharray="3,3"/>
+<text x="4921" y="1370" font-size="11" fill="#b26a00">FG-17 · планування</text>
+<text x="4921" y="1383" font-size="11" fill="#b26a00">знезараження в osnova</text>
+<text x="4921" y="1396" font-size="11" fill="#b26a00">· уточнити в ZEO</text>
+<polyline points="208,145 315,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="465,145 490,145 490,335 515,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="665,335 690,335 690,145 715,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="865,145 890,145 890,715 915,715" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="1065,715 1090,715 1090,145 1115,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="1265,145 1290,145 1290,525 1315,525" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="1465,525 1515,525" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="1665,525 1690,525 1690,335 1765,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="1790,310 1790,145 1972,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="1796" y="308" font-size="11.5" font-weight="600" fill="#222">ні</text>
+<polyline points="1815,335 1915,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="1821" y="331" font-size="11.5" font-weight="600" fill="#222">так</text>
+<polyline points="2065,335 2090,335 2090,1285 2115,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2265,1285 2290,1285 2290,145 2315,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2465,145 2565,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2615,145 2715,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2865,145 2890,145 2890,715 2915,715" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3065,715 3165,715" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3190,690 3190,145 3315,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3465,145 3572,145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3215,715 3290,715 3290,335 3315,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3465,335 3490,335 3490,905 3515,905" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3665,905 3690,905 3690,335 3715,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3865,335 3972,335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2590,170 2590,1095 2715,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2865,1095 2890,1095 2890,1285 2965,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="2990,1260 2990,1095 3115,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="2996" y="1252" font-size="11.5" font-weight="600" fill="#222">&gt; 17% (сире) — сушіння</text>
+<polyline points="3015,1285 4165,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="3021" y="1281" font-size="11.5" font-weight="600" fill="#222">≤ 14% — без доробки</text>
+<polyline points="2990,1310 2990,1475 3115,1475" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="2996" y="1324" font-size="11.5" font-weight="600" fill="#222">&gt; 14%, ≤ 17% — вентилювання</text>
+<polyline points="3265,1095 3315,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3465,1095 3515,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3665,1095 3765,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3790,1120 3790,1150 3390,1150 3390,1135" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="3796" y="1134" font-size="11.5" font-weight="600" fill="#222">ні — ще прохід</text>
+<polyline points="3815,1095 3915,1095" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="3821" y="1091" font-size="11.5" font-weight="600" fill="#222">так</text>
+<polyline points="4065,1095 4190,1095 4190,1310" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="3265,1475 4590,1475 4590,1260" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="4215,1285 4315,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="4465,1285 4565,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="4615,1285 4765,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="4790,1310 4790,1475 4915,1475" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="4796" y="1324" font-size="11.5" font-weight="600" fill="#222">так</text>
+<polyline points="4815,1285 5165,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="4821" y="1281" font-size="11.5" font-weight="600" fill="#222">ні</text>
+<polyline points="5065,1475 5190,1475 5190,1260" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<polyline points="5215,1285 5372,1285" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#arr)"/>
+<circle cx="190" cy="145" r="18" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="190.0" y="178" font-size="11.5" text-anchor="middle">Потрібно здати зерно</text>
+<rect x="315" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="330" cy="116" r="3.6"/><path d="M323.5,127 C323.5,121 336.5,121 336.5,127 Z"/></g>
+<text x="390.0" y="137.0" font-size="12" text-anchor="middle">Забронювати</text>
+<text x="390.0" y="152.0" font-size="12" text-anchor="middle">тайм-слот у</text>
+<text x="390.0" y="167.0" font-size="12" text-anchor="middle">Telegram-боті</text>
+<rect x="515" y="295" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(0 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(45 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(90 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(135 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(180 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(225 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(270 530 309)"/><rect x="528.4" y="301" width="3.2" height="3.6" transform="rotate(315 530 309)"/></g><circle cx="530" cy="309" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="530" cy="309" r="1.8" fill="#1e4f8a"/>
+<text x="590.0" y="327.0" font-size="12" text-anchor="middle">Перевірити квоту,</text>
+<text x="590.0" y="342.0" font-size="12" text-anchor="middle">підтвердити бронь,</text>
+<text x="590.0" y="357.0" font-size="12" text-anchor="middle">нагадати водію</text>
+<rect x="715" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="730" cy="116" r="3.6"/><path d="M723.5,127 C723.5,121 736.5,121 736.5,127 Z"/></g>
+<text x="790.0" y="137.0" font-size="12" text-anchor="middle">Заїхати у свій слот,</text>
+<text x="790.0" y="152.0" font-size="12" text-anchor="middle">отримати RFID-мітку,</text>
+<text x="790.0" y="167.0" font-size="12" text-anchor="middle">стати на ваги</text>
+<rect x="915" y="675" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(0 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(45 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(90 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(135 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(180 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(225 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(270 930 689)"/><rect x="928.4" y="681" width="3.2" height="3.6" transform="rotate(315 930 689)"/></g><circle cx="930" cy="689" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="930" cy="689" r="1.8" fill="#1e4f8a"/>
+<text x="990.0" y="699.5" font-size="12" text-anchor="middle">Зважити брутто —</text>
+<text x="990.0" y="714.5" font-size="12" text-anchor="middle">вага й номер</text>
+<text x="990.0" y="729.5" font-size="12" text-anchor="middle">надходять</text>
+<text x="990.0" y="744.5" font-size="12" text-anchor="middle">автоматично</text>
+<rect x="1115" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.2" stroke-linecap="round"><path d="M1124,126 L1124,120 Q1124,118 1126,118 L1127,118 L1127,123"/><path d="M1127,118 L1127,114 Q1128.2,112.8 1129.4,114 L1129.4,122"/><path d="M1129.4,115 Q1130.6,113.8 1131.8,115 L1131.8,122"/><path d="M1131.8,116 Q1133,114.8 1134.2,116 L1134.2,122"/><path d="M1134.2,117.5 Q1135.4,116.3 1136.6,117.5 L1136.6,123 Q1136.6,127 1132,127 L1124,127"/></g>
+<text x="1190.0" y="144.5" font-size="12" text-anchor="middle">Під'їхати до</text>
+<text x="1190.0" y="159.5" font-size="12" text-anchor="middle">пробовідбірника</text>
+<rect x="1315" y="485" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.2" stroke-linecap="round"><path d="M1324,506 L1324,500 Q1324,498 1326,498 L1327,498 L1327,503"/><path d="M1327,498 L1327,494 Q1328.2,492.8 1329.4,494 L1329.4,502"/><path d="M1329.4,495 Q1330.6,493.8 1331.8,495 L1331.8,502"/><path d="M1331.8,496 Q1333,494.8 1334.2,496 L1334.2,502"/><path d="M1334.2,497.5 Q1335.4,496.3 1336.6,497.5 L1336.6,503 Q1336.6,507 1332,507 L1324,507"/></g>
+<text x="1390.0" y="524.5" font-size="12" text-anchor="middle">Відібрати пробу з</text>
+<text x="1390.0" y="539.5" font-size="12" text-anchor="middle">кузова</text>
+<rect x="1515" y="485" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="1530" cy="496" r="3.6"/><path d="M1523.5,507 C1523.5,501 1536.5,501 1536.5,507 Z"/></g>
+<text x="1590.0" y="509.5" font-size="12" text-anchor="middle">Аналіз (вологість,</text>
+<text x="1590.0" y="524.5" font-size="12" text-anchor="middle">домішки, натура,</text>
+<text x="1590.0" y="539.5" font-size="12" text-anchor="middle">зараженість) — у</text>
+<text x="1590.0" y="554.5" font-size="12" text-anchor="middle">систему</text>
+<polygon points="1790.0,310 1815,335.0 1790.0,360 1765,335.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M1781.0,326.0 L1799.0,344.0 M1799.0,326.0 L1781.0,344.0" stroke="#222" stroke-width="3"/>
+<text x="1790.0" y="375" font-size="11.5" text-anchor="middle">Якість у межах</text>
+<text x="1790.0" y="388" font-size="11.5" text-anchor="middle">договору?</text>
+<circle cx="1990" cy="145" r="18" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="1990.0" y="178" font-size="11.5" text-anchor="middle">Відмова з причиною в</text>
+<text x="1990.0" y="191" font-size="11.5" text-anchor="middle">Telegram</text>
+<rect x="1915" y="295" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(0 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(45 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(90 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(135 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(180 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(225 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(270 1930 309)"/><rect x="1928.4" y="301" width="3.2" height="3.6" transform="rotate(315 1930 309)"/></g><circle cx="1930" cy="309" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="1930" cy="309" r="1.8" fill="#1e4f8a"/>
+<text x="1990.0" y="319.5" font-size="12" text-anchor="middle">Призначити яму,</text>
+<text x="1990.0" y="334.5" font-size="12" text-anchor="middle">доробку і силос за</text>
+<text x="1990.0" y="349.5" font-size="12" text-anchor="middle">якістю та планом;</text>
+<text x="1990.0" y="364.5" font-size="12" text-anchor="middle">заражене — окремо</text>
+<rect x="2115" y="1245" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="2130" cy="1256" r="3.6"/><path d="M2123.5,1267 C2123.5,1261 2136.5,1261 2136.5,1267 Z"/></g>
+<text x="2190.0" y="1284.5" font-size="12" text-anchor="middle">Запустити маршрут у</text>
+<text x="2190.0" y="1299.5" font-size="12" text-anchor="middle">smart.сдау</text>
+<rect x="2315" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.2" stroke-linecap="round"><path d="M2324,126 L2324,120 Q2324,118 2326,118 L2327,118 L2327,123"/><path d="M2327,118 L2327,114 Q2328.2,112.8 2329.4,114 L2329.4,122"/><path d="M2329.4,115 Q2330.6,113.8 2331.8,115 L2331.8,122"/><path d="M2331.8,116 Q2333,114.8 2334.2,116 L2334.2,122"/><path d="M2334.2,117.5 Q2335.4,116.3 2336.6,117.5 L2336.6,123 Q2336.6,127 2332,127 L2324,127"/></g>
+<text x="2390.0" y="144.5" font-size="12" text-anchor="middle">Розвантажитися в</text>
+<text x="2390.0" y="159.5" font-size="12" text-anchor="middle">призначену яму</text>
+<polygon points="2590.0,120 2615,145.0 2590.0,170 2565,145.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M2590.0,133.0 L2590.0,157.0 M2578.0,145.0 L2602.0,145.0" stroke="#222" stroke-width="3"/>
+<rect x="2715" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.2" stroke-linecap="round"><path d="M2724,126 L2724,120 Q2724,118 2726,118 L2727,118 L2727,123"/><path d="M2727,118 L2727,114 Q2728.2,112.8 2729.4,114 L2729.4,122"/><path d="M2729.4,115 Q2730.6,113.8 2731.8,115 L2731.8,122"/><path d="M2731.8,116 Q2733,114.8 2734.2,116 L2734.2,122"/><path d="M2734.2,117.5 Q2735.4,116.3 2736.6,117.5 L2736.6,123 Q2736.6,127 2732,127 L2724,127"/></g>
+<text x="2790.0" y="144.5" font-size="12" text-anchor="middle">Заїхати на ваги —</text>
+<text x="2790.0" y="159.5" font-size="12" text-anchor="middle">RFID фіксує маршрут</text>
+<rect x="2915" y="675" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(0 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(45 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(90 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(135 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(180 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(225 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(270 2930 689)"/><rect x="2928.4" y="681" width="3.2" height="3.6" transform="rotate(315 2930 689)"/></g><circle cx="2930" cy="689" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="2930" cy="689" r="1.8" fill="#1e4f8a"/>
+<text x="2990.0" y="707.0" font-size="12" text-anchor="middle">Зважити тару — нетто</text>
+<text x="2990.0" y="722.0" font-size="12" text-anchor="middle">рахується</text>
+<text x="2990.0" y="737.0" font-size="12" text-anchor="middle">автоматично</text>
+<polygon points="3190.0,690 3215,715.0 3190.0,740 3165,715.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M3190.0,703.0 L3190.0,727.0 M3178.0,715.0 L3202.0,715.0" stroke="#222" stroke-width="3"/>
+<rect x="3315" y="105" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="3330" cy="116" r="3.6"/><path d="M3323.5,127 C3323.5,121 3336.5,121 3336.5,127 Z"/></g>
+<text x="3390.0" y="137.0" font-size="12" text-anchor="middle">Отримати ТТН або</text>
+<text x="3390.0" y="152.0" font-size="12" text-anchor="middle">е-ТТН з відміткою,</text>
+<text x="3390.0" y="167.0" font-size="12" text-anchor="middle">виїхати</text>
+<circle cx="3590" cy="145" r="18" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="3590.0" y="178" font-size="11.5" text-anchor="middle">Авто виїхало</text>
+<rect x="3315" y="295" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(0 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(45 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(90 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(135 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(180 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(225 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(270 3330 309)"/><rect x="3328.4" y="301" width="3.2" height="3.6" transform="rotate(315 3330 309)"/></g><circle cx="3330" cy="309" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="3330" cy="309" r="1.8" fill="#1e4f8a"/>
+<text x="3390.0" y="327.0" font-size="12" text-anchor="middle">Розрахувати залікову</text>
+<text x="3390.0" y="342.0" font-size="12" text-anchor="middle">вагу, додати в</text>
+<text x="3390.0" y="357.0" font-size="12" text-anchor="middle">реєстр поклажодавця</text>
+<rect x="3515" y="865" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="3530" cy="876" r="3.6"/><path d="M3523.5,887 C3523.5,881 3536.5,881 3536.5,887 Z"/></g>
+<text x="3590.0" y="904.5" font-size="12" text-anchor="middle">Перевірити</text>
+<text x="3590.0" y="919.5" font-size="12" text-anchor="middle">розрахунок</text>
+<rect x="3715" y="295" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(0 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(45 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(90 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(135 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(180 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(225 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(270 3730 309)"/><rect x="3728.4" y="301" width="3.2" height="3.6" transform="rotate(315 3730 309)"/></g><circle cx="3730" cy="309" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="3730" cy="309" r="1.8" fill="#1e4f8a"/>
+<text x="3790.0" y="327.0" font-size="12" text-anchor="middle">Передати дані в BAS,</text>
+<text x="3790.0" y="342.0" font-size="12" text-anchor="middle">сповістити</text>
+<text x="3790.0" y="357.0" font-size="12" text-anchor="middle">поклажодавця</text>
+<circle cx="3990" cy="335" r="18" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="3990.0" y="368" font-size="11.5" text-anchor="middle">Машину враховано,</text>
+<text x="3990.0" y="381" font-size="11.5" text-anchor="middle">поклажодавець має</text>
+<text x="3990.0" y="394" font-size="11.5" text-anchor="middle">результат</text>
+<rect x="2715" y="1055" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="2730" cy="1066" r="3.6"/><path d="M2723.5,1077 C2723.5,1071 2736.5,1071 2736.5,1077 Z"/></g>
+<text x="2790.0" y="1087.0" font-size="12" text-anchor="middle">Попереднє очищення,</text>
+<text x="2790.0" y="1102.0" font-size="12" text-anchor="middle">вага відходів — у</text>
+<text x="2790.0" y="1117.0" font-size="12" text-anchor="middle">систему</text>
+<polygon points="2990.0,1260 3015,1285.0 2990.0,1310 2965,1285.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M2981.0,1276.0 L2999.0,1294.0 M2999.0,1276.0 L2981.0,1294.0" stroke="#222" stroke-width="3"/>
+<text x="3075.0" y="1191" font-size="11.5" text-anchor="middle">Вологість за аналізом</text>
+<text x="3075.0" y="1204" font-size="11.5" text-anchor="middle">(базис 14%)?</text>
+<rect x="3115" y="1055" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(0 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(45 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(90 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(135 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(180 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(225 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(270 3130 1069)"/><rect x="3128.4" y="1061" width="3.2" height="3.6" transform="rotate(315 3130 1069)"/></g><circle cx="3130" cy="1069" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="3130" cy="1069" r="1.8" fill="#1e4f8a"/>
+<text x="3190.0" y="1087.0" font-size="12" text-anchor="middle">Накопичити в</text>
+<text x="3190.0" y="1102.0" font-size="12" text-anchor="middle">буферному силосі</text>
+<text x="3190.0" y="1117.0" font-size="12" text-anchor="middle">сирого зерна</text>
+<rect x="3315" y="1055" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(0 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(45 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(90 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(135 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(180 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(225 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(270 3330 1069)"/><rect x="3328.4" y="1061" width="3.2" height="3.6" transform="rotate(315 3330 1069)"/></g><circle cx="3330" cy="1069" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="3330" cy="1069" r="1.8" fill="#1e4f8a"/>
+<text x="3390.0" y="1094.5" font-size="12" text-anchor="middle">Просушити — режим за</text>
+<text x="3390.0" y="1109.5" font-size="12" text-anchor="middle">вологістю партії</text>
+<rect x="3515" y="1055" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="3530" cy="1066" r="3.6"/><path d="M3523.5,1077 C3523.5,1071 3536.5,1071 3536.5,1077 Z"/></g>
+<text x="3590.0" y="1087.0" font-size="12" text-anchor="middle">Виміряти вологість</text>
+<text x="3590.0" y="1102.0" font-size="12" text-anchor="middle">на виході сушарки —</text>
+<text x="3590.0" y="1117.0" font-size="12" text-anchor="middle">дані в систему</text>
+<polygon points="3790.0,1070 3815,1095.0 3790.0,1120 3765,1095.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M3781.0,1086.0 L3799.0,1104.0 M3799.0,1086.0 L3781.0,1104.0" stroke="#222" stroke-width="3"/>
+<text x="3790.0" y="1047" font-size="11.5" text-anchor="middle">Вологість на виході ≤</text>
+<text x="3790.0" y="1060" font-size="11.5" text-anchor="middle">14%?</text>
+<rect x="3115" y="1435" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="3130" cy="1446" r="3.6"/><path d="M3123.5,1457 C3123.5,1451 3136.5,1451 3136.5,1457 Z"/></g>
+<text x="3190.0" y="1467.0" font-size="12" text-anchor="middle">Подати в силос з</text>
+<text x="3190.0" y="1482.0" font-size="12" text-anchor="middle">аерацією, увімкнути</text>
+<text x="3190.0" y="1497.0" font-size="12" text-anchor="middle">вентилювання</text>
+<rect x="3915" y="1055" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="3930" cy="1066" r="3.6"/><path d="M3923.5,1077 C3923.5,1071 3936.5,1071 3936.5,1077 Z"/></g>
+<text x="3990.0" y="1094.5" font-size="12" text-anchor="middle">Вторинне очищення</text>
+<text x="3990.0" y="1109.5" font-size="12" text-anchor="middle">після сушіння</text>
+<polygon points="4190.0,1260 4215,1285.0 4190.0,1310 4165,1285.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M4181.0,1276.0 L4199.0,1294.0 M4199.0,1276.0 L4181.0,1294.0" stroke="#222" stroke-width="3"/>
+<rect x="4315" y="1245" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#1e4f8a" stroke-width="1.6"/>
+<g fill="#1e4f8a"><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(0 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(45 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(90 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(135 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(180 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(225 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(270 4330 1259)"/><rect x="4328.4" y="1251" width="3.2" height="3.6" transform="rotate(315 4330 1259)"/></g><circle cx="4330" cy="1259" r="5.2" fill="none" stroke="#1e4f8a" stroke-width="1.8"/><circle cx="4330" cy="1259" r="1.8" fill="#1e4f8a"/>
+<text x="4390.0" y="1284.5" font-size="12" text-anchor="middle">Подати зерно в</text>
+<text x="4390.0" y="1299.5" font-size="12" text-anchor="middle">призначений силос</text>
+<polygon points="4590.0,1260 4615,1285.0 4590.0,1310 4565,1285.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M4581.0,1276.0 L4599.0,1294.0 M4599.0,1276.0 L4581.0,1294.0" stroke="#222" stroke-width="3"/>
+<polygon points="4790.0,1260 4815,1285.0 4790.0,1310 4765,1285.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M4781.0,1276.0 L4799.0,1294.0 M4799.0,1276.0 L4781.0,1294.0" stroke="#222" stroke-width="3"/>
+<text x="4790.0" y="1237" font-size="11.5" text-anchor="middle">Заражено шкідниками?</text>
+<rect x="4915" y="1435" width="150" height="80" rx="10" fill="#ffffff" stroke="#222" stroke-width="1.6"/>
+<g fill="none" stroke="#222" stroke-width="1.3"><circle cx="4930" cy="1446" r="3.6"/><path d="M4923.5,1457 C4923.5,1451 4936.5,1451 4936.5,1457 Z"/></g>
+<text x="4990.0" y="1459.5" font-size="12" text-anchor="middle">Запланувати</text>
+<text x="4990.0" y="1474.5" font-size="12" text-anchor="middle">знезараження, силос</text>
+<text x="4990.0" y="1489.5" font-size="12" text-anchor="middle">поза обігом на час</text>
+<text x="4990.0" y="1504.5" font-size="12" text-anchor="middle">дегазації</text>
+<polygon points="5190.0,1260 5215,1285.0 5190.0,1310 5165,1285.0" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<path d="M5181.0,1276.0 L5199.0,1294.0 M5199.0,1276.0 L5181.0,1294.0" stroke="#222" stroke-width="3"/>
+<circle cx="5390" cy="1285" r="18" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="5390.0" y="1318" font-size="11.5" text-anchor="middle">Зерно в силосі</text>
+<text x="20" y="1568" font-size="12" font-weight="600">TO-BE · приймання зерна</text>
+<rect x="189" y="1557" width="16" height="14" fill="#e8f5e9" stroke="#2e7d32"/>
+<text x="211" y="1568" font-size="12">Fit / Налаштування</text>
+<rect x="341.4" y="1557" width="16" height="14" fill="#fff3e0" stroke="#b26a00"/>
+<text x="363.4" y="1568" font-size="12">Інтеграція / Gap / уточнити</text>
+<text x="20" y="1592" font-size="12.5" fill="#333">Типи задач: рука — вручну, без системи; людина — людина працює в системі; шестерня — виконує система автоматично.</text>
+<text x="20" y="1611" font-size="12.5" fill="#333">FG-NN — рядок Fit-Gap матриці (розділ 5 кейсу): чим саме продукт osnova / smart закриває потребу клієнта.</text>
+<text x="20" y="1630" font-size="12.5" fill="#333">Fit — є в продукті з коробки.   Налаштування — довідники, норми, ролі без програмування.   Інтеграція — обмін з обладнанням чи системами клієнта (ваги, BAS).   Gap — доробка під клієнта.</text>
+<text x="20" y="1649" font-size="12.5" fill="#333">US-NN — User Story для розробки (пишемо лише на Інтеграцію та Gap).   ВМ-N — вузьке місце з AS-IS, яке усуває цей крок.</text>
+<text x="20" y="1668" font-size="12.5" fill="#333">Складський документ оформлюється на партію, окремим процесом; реєстрація в держреєстрі складських документів — FG-14, уточнити в ZEO.</text>
+<text x="20" y="1687" font-size="12.5" fill="#333">Вологість — групи за Техрегламентом зернового складу (п. 6.9.4): середньої сухості 13,5–15,5%, вологе 15,5–17%, сире понад 17%. Базис 14% — приклад для кукурудзи. Межу між вентилюванням і сушінням узято як межу групи «сире»; конкретну межу встановлює технолог.</text>
+<text x="20" y="1706" font-size="12.5" fill="#333">Далі — зберігання, окремий процес: термопідвіски в силосі стежать за температурою; якщо зерно гріється — вентилюють або перекачують у інший силос.</text>
+<text x="20" y="1725" font-size="12.5" fill="#333">Схема — приймання на зберігання (поклажодавець). При закупівлі зерна елеватором кроки ті самі, але замість складського документа — документи купівлі-продажу, а оплата йде за заліковою вагою.</text>
+</svg>
